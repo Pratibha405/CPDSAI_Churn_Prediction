@@ -1,0 +1,18 @@
+version: '3.12.6'
+
+services:
+  churn_app:
+    command: python app.py
+    image: pratibha2025/cpdsai-project-dash:latest1
+    #platform: linux/x86_64
+    build: 
+      context: .
+      dockerfile: .Dockerfile
+    ports:
+      - 9001:80
+    volumes:
+      - ./code:/root/code
+      - ./.vscode-server:/root/.vscode-server
+    environment:
+      - HOST=0.0.0.0
+      - PORT=80

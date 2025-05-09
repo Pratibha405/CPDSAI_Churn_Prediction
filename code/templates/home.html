@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Churn Prediction App</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            margin-top: 50px;
+            max-width: 800px;
+        }
+        .card {
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card shadow p-4">
+            <h1 class="text-center mb-4 text-primary">Welcome to the Teleco Customer Churn Prediction App</h1>
+            <p>This app helps you predict <strong>customer churn</strong> based on derived features like <em>Engagement Score</em>, <em>Customer Frequency</em>, and <em>Long Term Stability</em>. These are calculated using inputs such as Monthly Charges, Tenure, Tech Support availability, and Contract Type.</p>
+            
+            <h3 class="mt-4 text-secondary">Key Features:</h3>
+            <ul class="list-group list-group-flush mb-3">
+                <li class="list-group-item">Engagement Score</li>
+                <li class="list-group-item">Customer Interaction Frequency</li>
+                <li class="list-group-item">Long Term Contract Stability</li>
+            </ul>
+
+            <h3 class="text-secondary">Prediction Capabilities:</h3>
+            <ul class="list-group list-group-flush mb-4">
+                <li class="list-group-item">
+                    Predict the likelihood of a customer churning using ML model 
+                    <br><small class="text-muted">Prediction: <strong>1</strong> = Customer Will Churn, <strong>0</strong> = Customer Will Not Churn</small>
+                </li>
+            </ul>
+
+            <div class="d-grid">
+                <a href="{{ url_for('calculate_features') }}" class="btn btn-primary btn-lg">Start Feature Calculation & Churn Prediction</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS CDN (optional, if you need interactivity) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
