@@ -27,9 +27,21 @@
             
             <h3 class="mt-4 text-secondary">Key Features:</h3>
             <ul class="list-group list-group-flush mb-3">
-                <li class="list-group-item">Engagement Score</li>
-                <li class="list-group-item">Customer Interaction Frequency</li>
-                <li class="list-group-item">Long Term Contract Stability</li>
+                
+                    
+                <li class="list-group-item">
+                    <strong>Engagement Score:</strong> Higher scores indicate lower probability of churn. However, a low engagement score combined with tech support and a valid contract still suggests a lower chance of churn. It acts as an early warning sign.
+                </li>
+                <li class="list-group-item">
+                    <strong>Customer Interaction Frequency:</strong> 
+                    When <em>Tech Support = Yes</em>, value is 1 (indicating customer is actively using support). 
+                    If <em>Tech Support = No</em> and <em>Internet Service = No</em>, value is 0 (no interaction expected).
+                </li>
+                <li class="list-group-item">
+                    <strong>Long Term Contract Stability:</strong> 
+                    Value is <em>0</em> for Month-to-Month contracts (indicating instability), and <em>1</em> for One-Year or Two-Year contracts (indicating greater customer retention likelihood).
+                </li>
+                
             </ul>
 
             <h3 class="text-secondary">Prediction Capabilities:</h3>
